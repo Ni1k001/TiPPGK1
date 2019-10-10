@@ -59,13 +59,10 @@ void AHexMap::ResetMap()
 
 void AHexMap::FindNeighbours(AHex* Hex)
 {
-	int index = Map.Find(Hex);
-
-		if (Hex->GetCoordY() % 2 == 0)
+	if (Hex->GetCoordY() % 2 == 0)
 	{
 		for (AHex* hex : Map)
 		{
-
 			if ((hex->GetCoordX() + 1 == Hex->GetCoordX() && hex->GetCoordY() + 1 == Hex->GetCoordY()) ||
 				(hex->GetCoordX() == Hex->GetCoordX() && hex->GetCoordY() + 1 == Hex->GetCoordY()) ||
 				(hex->GetCoordX() + 1 == Hex->GetCoordX() && hex->GetCoordY() == Hex->GetCoordY()) ||

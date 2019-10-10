@@ -88,8 +88,6 @@ void AHexCharacter::OnSelected()
 					{
 						HexMap->ResetMap();
 
-						UE_LOG(LogTemp, Warning, TEXT("Coords: %d %d"), Hex->GetCoordX(), Hex->GetCoordY());
-
 						Hex->OnSelected(ESelectionType::ESelected);
 
 						HexMap->FindNeighbours(Hex);

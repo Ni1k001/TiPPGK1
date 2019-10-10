@@ -59,12 +59,18 @@ private:
 
 	UPROPERTY(VisibleAnywhere, Category = Config)
 		TEnumAsByte<ESelectionType::SelectionType> SelectionType;
+	
+	UPROPERTY(VisibleAnywhere, Category = Config)
+		UMaterial* StoredMaterial;
 
-	UMaterial* StoredMaterial;
-
-	UMaterialInstanceDynamic* DefaultMat;
-	UMaterialInstanceDynamic* SelectedMat;
-	UMaterialInstanceDynamic* NeighbourMat;
+	UPROPERTY(VisibleAnywhere, Category = Config)
+		UMaterialInstanceDynamic* DefaultMat;
+	
+	UPROPERTY(VisibleAnywhere, Category = Config)
+		UMaterialInstanceDynamic* SelectedMat;
+	
+	UPROPERTY(VisibleAnywhere, Category = Config)
+		UMaterialInstanceDynamic* NeighbourMat;
 
 public:
 	UFUNCTION()
